@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Page Title -->
+    <title>Doctors</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/favicon.bmp" type="image/x-icon">
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+
+
+
+
+
+
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/animate-3.7.0.css">
+    <link rel="stylesheet" href="assets/css/font-awesome-4.7.0.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-4.1.3.min.css">
+    <link rel="stylesheet" href="assets/css/owl-carousel.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="assets/css/linearicons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Preloader Starts -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Header Area Starts -->
+  <style>
+    :root {
+      --primary: #2ba8ce;
+      --primary-light: #3bb2f6;
+      --accent: #f59e0b;
+      --text: #1f2937;
+      --bg: #f8fafc;
+      --card-bg: rgba(255, 255, 255, 0.15);
+      --border: rgba(255, 255, 255, 0.2);
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+
+    /* Header */
+    .hospital-header {
+      background: whitesmoke;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid var(--border);
+      padding: 0.5rem 0;
+    }
+
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .logo img {
+      height: 50px;
+      margin-right: 12px;
+      border-radius: 8px;
+    }
+
+
+    /* Navigation */
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-item > a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.75rem 0;
+      display: block;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-item > a::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+      transition: width 0.4s ease;
+    }
+
+    .nav-item:hover > a,
+    .nav-item.active > a {
+      color: white;
+    }
+
+    .nav-item:hover > a::before,
+    .nav-item.active > a::before {
+      width: 100%;
+    }
+
+    /* Dropdown */
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      min-width: 280px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      padding: 1rem 0;
+      margin-top: 1rem;
+    }
+
+    .nav-item:hover .dropdown {
+      opacity: 1;
+      visibility: visible;
+      /* transform: translateX(-50%) translateY(8px); */
+    }
+
+    .dropdown a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0.75rem 1.5rem;
+      color: #000;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+
+    }
+
+    .dropdown a i {
+      width: 20px;
+      font-size: 1.1rem;
+      color: var(--accent);
+    }
+
+    .dropdown a:hover {
+      background: rgba(255, 255, 255, 0);
+      padding-left: 2rem;     
+       background-color: #697ea7b9;
+       color: white;
+    }
+
+    /* CTA Button */
+    .cta-btn {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+    }
+
+    .cta-btn:hover {
+      background: #f97316;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+    }
+
+    /* Mobile Toggle */
+    .mobile-toggle {
+      display: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Mobile Menu */
+
+    
+    @media (max-width: 992px) {
+      .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+            background-color:#8c93b3;
+    color: #fff;
+        backdrop-filter: blur(12px);
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        transition: left 0.4s ease;
+        overflow-y: auto;
+      }
+
+      .nav-menu.active {
+        left: 0;
+      }
+
+      .nav-item > a {
+        padding: 1rem 0;
+        font-size: 1.1rem;
+      }
+
+      .dropdown {
+        position: static;
+        transform: none;
+        background: rgba(0, 0, 0, 0.1);
+        border: none;
+        box-shadow: none;
+        border-radius: 12px;
+        margin: 0.5rem 0;
+        display: none;
+      }
+
+      .dropdown.active {
+        display: block;
+      }
+
+      .dropdown a {
+        padding-left: 2.5rem;
+      }
+
+      .nav-item.open .dropdown {
+        display: block;
+      }
+
+      .nav-item > a::after {
+        content: '\f078';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        float: right;
+        font-size: 0.9rem;
+        transition: transform 0.3s;
+      }
+
+      .nav-item.open > a::after {
+        transform: rotate(180deg);
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+
+      .cta-btn {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo a {
+        font-size: 1.4rem;
+      }
+      .logo img {
+        height: 40px;
+      }
+    }
+  </style>
+
+  <!-- Modern Hospital Header -->
+  <header class="hospital-header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/logo/logo.png" alt="Bismillah Generel Hospital & Digital Diagnostic Center">
+        </a>
+      </div>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item active"><a href="index.html">Home</a></li>
+          
+          <li class="nav-item">
+            <a href="departments.html">Departments <i class="fa-solid fa-caret-down"></i></a>
+            <div class="dropdown">
+              <a href="/department/bismillah-digital-diagonstic-center.html"><i class="fas fa-microscope"></i>Bismillah Digital Diagnostic Center</a>
+              <a href="/department/bismillah-general-hospital.html"><i class="fas fa-hospital"></i>Bismillah General Hospital</a>
+              <a href="/department/bismillah-physio-therapy-center.html"><i class="fas fa-running"></i>Bismillah Physiotherapy Center</a>
+              <a href="/department/bismillah-rent-a-car.html"><i class="fas fa-car"></i>Bismillah Rent A Car</a>
+              <a href="/department/bismillah-medicine-corner.html"><i class="fas fa-pills"></i>Bismillah Medicine Corner</a>
+              <a href="/department/bismillah-dialysis-center.html"><i class="fas fa-heartbeat"></i>Bismillah Dialysis Center</a>
+              <a href="/department/bismillah-ct-scan-center.html"><i class="fas fa-x-ray"></i>Bismillah CT Scan Center</a>
+              <a href="/department/bismillah-ambulance-service.html"><i class="fas fa-ambulance"></i>Bismillah Ambulance Service</a>
+            </div>
+          </li>
+          
+          <li class="nav-item"><a href="doctors.html">Doctors</a></li>
+          <li class="nav-item"><a href="about.html">About Us</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="mobile-toggle" id="mobile-toggle">
+          <i class="fas fa-bars text-success"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+<script>
+  // Auto Set Active Menu Item - FIXED & ROBUST
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPath = location.pathname; // e.g., "/", "/about.html", "/department/bismillah-general-hospital.html"
+    const links = document.querySelectorAll('.nav-menu a');
+
+    // Normalize current path
+    let currentPage = currentPath.endsWith('/') ? currentPath.slice(0, -1) : currentPath;
+    if (!currentPage) currentPage = '/'; // Root = home
+
+    links.forEach(link => {
+      const href = link.getAttribute('href');
+      let linkPath = href;
+
+      // Normalize href
+      if (href === 'index.html' || href === '/' || href === './') {
+        linkPath = '/';
+      } else if (href.startsWith('/')) {
+        linkPath = href.split('#')[0].split('?')[0]; // Remove hash/query
+      } else {
+        // Relative path - convert to absolute for comparison
+        const base = location.pathname.substring(0, location.pathname.lastIndexOf('/'));
+        linkPath = new URL(href, location.origin + base).pathname;
+      }
+
+      // Special: if current page is in /department/, and link is "departments.html", don't activate
+      if (currentPage.startsWith('/department/') && linkPath === '/departments.html') {
+        return;
+      }
+
+      // Match exact or root
+      if (linkPath === currentPage || (linkPath === '/' && currentPage === '/')) {
+        link.parentElement.classList.add('active');
+      } else {
+        link.parentElement.classList.remove('active');
+      }
+    });
+  });
+
+  // Mobile Menu Toggle
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  mobileToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navMenu.classList.toggle('active');
+  });
+
+  // Dropdown on Mobile
+  document.querySelectorAll('.nav-item > a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      if (window.innerWidth <= 992 && this.nextElementSibling?.classList.contains('dropdown')) {
+        e.preventDefault();
+        const parent = this.parentElement;
+        parent.classList.toggle('open');
+        const dropdown = parent.querySelector('.dropdown');
+        dropdown.classList.toggle('active');
+      }
+    });
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.hospital-header')) {
+      navMenu.classList.remove('active');
+      document.querySelectorAll('.nav-item').forEach(item => {
+        item.classList.remove('open');
+        item.querySelector('.dropdown')?.classList.remove('active');
+      });
+    }
+  });
+</script>
+    <!-- Header Area End -->
+
+    <!-- Banner Area Starts -->
+    <section class="banner-area other-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Our doctors</h1>
+                    <a href="index.html">Home</a> <span>|</span> <a href="doctors.html">Doctors</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Area End -->
+
+    <!-- Specialist Area Starts -->
+  <!-- ==================== SPECIALIST SECTION ==================== -->
+<section class="specialist-area py-5 bg-light">
+    <div class="container">
+
+        <!-- Section Title -->
+        <div class="row mb-5">
+            <div class="col-lg-6 mx-auto text-center">
+                <h2 class="display-5 fw-bold ">Our Specialists</h2>
+                <p class="text-muted">Green above he cattle god saw day multiply under fill in the cattle fowl a all, living, tree word link available in the service for subdue fruit.</p>
+            </div>
+        </div>
+
+        <!-- Cards Grid with consistent gap -->
+        <div class="row g-4 justify-content-center">
+
+            <!-- CARD 1 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card border-0 shadow-sm h-100 text-center specialist-card">
+                    <div class="p-3">
+                        <img src="assets/images/doctor1.png" class="rounded-circle" alt="Dr. Major Anowar Hossain">
+                    </div>
+                    <div class="card-body p-3 d-flex flex-column">
+                        <h5 class="card-title mb-1">Dr. Major Anowar Hossain (Rtr)</h5>
+                        <h6 class="text-primary small mb-2">Skin & Cosmetic Surgeon</h6>
+                        <p class="small text-muted mb-3 flex-grow-1">Associate Prof., IBN SINA</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-outline-primary btn-sm btn-more" data-bs-toggle="modal" data-bs-target="#docModal1">
+                                More Details
+                            </button>
+                        </div>
+                        <div class="social-icons mt-3">
+                            <a href="#" class="text-secondary mx-1"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-secondary mx-1"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-secondary mx-1"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-secondary mx-1"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2 Dr. Md. Abdullah Al Farooq-->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card border-0 shadow-sm h-100 text-center specialist-card">
+                    <div class="p-3">
+                        <img src="assets/images/doctor2.png" class="rounded-circle" alt="Dand Mories">
+                    </div>
+                    <div class="card-body p-3 d-flex flex-column">
+                        <h5 class="card-title mb-1">Dr. Md. Abdullah Al Farooq</h5>
+            <h6 class="text-primary small mb-2">Pediatric & Laparoscopic Surgeon</h6>
+            <p class="small text-muted mb-3 flex-grow-1">Associate Prof., CMCH</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-outline-primary btn-sm btn-more" data-bs-toggle="modal" data-bs-target="#docModal2">
+                                More Details
+                            </button>
+                        </div>
+                        <div class="social-icons mt-3">
+                            <a href="#" class="text-secondary mx-1"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-secondary mx-1"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-secondary mx-1"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-secondary mx-1"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3 Dr. Md. Nazmul Haq-->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card border-0 shadow-sm h-100 text-center specialist-card">
+                    <div class="p-3">
+                        <img src="assets/images/doctor3.png" class="rounded-circle" alt="Align Board">
+                    </div>
+                    <div class="card-body p-3 d-flex flex-column">
+            <h5 class="card-title mb-1">Dr. Md. Nazmul Haq</h5>
+            <h6 class="text-primary small mb-2">Diabetologist & Public Health</h6>
+            <p class="small text-muted mb-3 flex-grow-1">Medical Officer, UHC Hajigonj</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-outline-primary btn-sm btn-more" data-bs-toggle="modal" data-bs-target="#docModal3">
+                                More Details
+                            </button>
+                        </div>
+                        <div class="social-icons mt-3">
+                            <a href="#" class="text-secondary mx-1"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-secondary mx-1"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-secondary mx-1"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-secondary mx-1"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 4 Dr. Md. Ayub Ali Sarkar-->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card border-0 shadow-sm h-100 text-center specialist-card">
+                    <div class="p-3">
+                        <img src="assets/images/doctor4.png" class="rounded-circle" alt="Jeson Limit">
+                    </div>
+                    <div class="card-body p-3 d-flex flex-column">
+            <h5 class="card-title mb-1">Dr. Md. Ayub Ali Sarkar</h5>
+            <h6 class="text-primary small mb-2">Medicine & Cardiology Specialist</h6>
+            <p class="small text-muted mb-3 flex-grow-1">Medical Officer, UHC Hajigonj</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-outline-primary btn-sm btn-more" data-bs-toggle="modal" data-bs-target="#docModal4">
+                                More Details
+                            </button>
+                        </div>
+                        <div class="social-icons mt-3">
+                            <a href="#" class="text-secondary mx-1"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-secondary mx-1"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-secondary mx-1"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-secondary mx-1"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- ==================== END SECTION ==================== -->
+
+<!-- ====================== MODALS WITH X ICON ====================== -->
+
+<!-- Modal 1 -->
+<div class="modal fade" id="docModal1" tabindex="-1" aria-labelledby="docModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0 position-relative">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-close" style="font-size:18px;color:red"></i></button>
+            </div>
+            <div class="modal-body text-center p-4">
+                <img src="assets/images/doctor1.png" class="rounded-circle mb-3" style="width:130px;height:130px;object-fit:cover;" alt="Dr. Major Anowar Hossain">
+                <h4 class="mb-1">Dr. Major Anowar Hossain (Rtr)</h4>
+                <h6 class="text-primary mb-3">
+                    MBBS, MCPS (Skin & Venereal Diseases), D.D.V (DU)<br>
+                    Skin, Venereal Diseases & Leprosy Specialist<br>
+                    Cosmetic Surgeon
+                </h6>
+                <p class="mb-2"><strong>Associate Professor & Head of the Department</strong></p>
+                <p class="mb-3">Skin and Venereal Diseases, IBN SINA MEDICAL COLLEGE & HOSPITAL, DHAKA</p>
+                <p class="text-success fw-bold">Visiting Time: Every Friday 10:00 AM – 4:00 PM</p>
+                <div class="social-icons mt-3">
+                    <a href="#" class="text-secondary mx-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-secondary mx-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-secondary mx-2"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-secondary mx-2"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade" id="docModal2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0 position-relative">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-close" style="font-size:18px;color:red"></i></button>
+            </div>
+            <div class="modal-body text-center p-4">
+                <img src="assets/images/doctor2.png" class="rounded-circle mb-3" style="width:130px;height:130px;object-fit:cover;" alt="Dand Mories">
+        <h4 class="mb-1" id="docModalLabel2">Dr. Md. Abdullah Al Farooq</h4>
+        <h6 class="text-primary mb-3">
+          MBBS, BCS(Health), FCPS (Surgery), MS (Pediatric Surgery)<br>
+          Trained Fellow (UK)<br>
+          General, Laparoscopic & Pediatric Surgery Specialist & Paediatric Urologist
+        </h6>
+        <p class="mb-2"><strong>Associate Professor</strong></p>
+        <p class="mb-3">Pediatric Surgery Department, Chittagong Medical College Hospital</p>
+        <p class="text-success fw-bold">Visiting Time: Every Friday (10:00 AM to 4:00 PM)</p>
+                <div class="social-icons mt-3">
+                    <a href="#" class="text-secondary mx-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-secondary mx-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-secondary mx-2"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-secondary mx-2"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="modal fade" id="docModal3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0 position-relative">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-close" style="font-size:18px;color:red"></i></button>
+            </div>
+            <div class="modal-body text-center p-4">
+                <img src="assets/images/doctor3.png" class="rounded-circle mb-3" style="width:130px;height:130px;object-fit:cover;" alt="Align Board">
+        <h4 class="mb-1" id="docModalLabel3">Dr. Md. Nazmul Haq</h4>
+        <h6 class="text-primary mb-3">
+          MBBS, BCS(Health), CCD (BIRDEM)<br>
+          MPH, CMU (Sono)<br>
+          Diabetes & Public Health Specialist
+        </h6>
+        <p class="mb-2"><strong>Ex-Medical Officer</strong></p>
+        <p class="mb-3">Dhaka Medical College Hospital</p>
+        <p class="mb-2"><strong>Current:</strong> Medical Officer, UHC, Hajigonj, Chandpur</p>
+        <p class="text-success fw-bold">Visiting Time: Everyday (10:00 AM to 8:00 PM)</p>
+                <div class="social-icons mt-3">
+                    <a href="#" class="text-secondary mx-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-secondary mx-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-secondary mx-2"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-secondary mx-2"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 4 -->
+<div class="modal fade" id="docModal4" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0 position-relative">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-close" style="font-size:18px;color:red"></i></button>
+            </div>
+            <div class="modal-body text-center p-4">
+                <img src="assets/images/doctor4.png" class="rounded-circle mb-3" style="width:130px;height:130px;object-fit:cover;" alt="Jeson Limit">
+        <h4 class="mb-1" id="docModalLabel4">Dr. Md. Ayub Ali Sarkar</h4>
+        <h6 class="text-primary mb-3">
+          MBBS (DMC), BCS(Health), FCPS (Medicine-FP)<br>
+          PGT (Medicine), PGT (Neurology), PGT (Cardiology)<br>
+          Medicine, Cardiology, Diabetes & Neurology Specialist
+        </h6>
+        <p class="mb-2"><strong>Ex-Medical Officer</strong></p>
+        <p class="mb-3">Dhaka Medical College Hospital</p>
+        <p class="mb-2"><strong>Current:</strong> Medical Officer, UHC, Hajigonj, Chandpur</p>
+        <p class="text-success fw-bold">Visiting Time: Everyday (3:00 PM to 8:00 PM)</p>
+                <div class="social-icons mt-3">
+                    <a href="#" class="text-secondary mx-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-secondary mx-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-secondary mx-2"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-secondary mx-2"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Specialist Area Starts -->
+
+<!-- Hotline Area Starts -->
+
+<section class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-10">
+
+      <div class="medical-card">
+
+        <!-- Header -->
+        <div class="card-header">
+          <h2 class="header-title">
+            <i class="fas fa-heartbeat pulse-heart me-2"></i> Emergency Hotline
+          </h2>
+          <p class="header-subtitle">We provide 24/7 customer support. Please feel free to contact us
+for emergency case.</p>
+        </div>
+
+        <!-- One Row: Two Numbers -->
+        <div class="hotline-row">
+
+          <div class="hotline-col">
+            <div class="icon-circle"><i class="fas fa-stethoscope"></i></div>
+            <div class="phone-number">+880 1748-237575</div>
+            <!-- <span class="hotline-label">Emergency </span> -->
+            <a href="tel:+8801748237575" class="btn-call" data-number="+880 1748-237575">
+              <i class="fas fa-phone"></i> Call Now
+            </a>
+          </div>
+
+          <div class="hotline-col">
+            <div class="icon-circle"><i class="fas fa-ambulance"></i></div>
+            <div class="phone-number">+880 1819-175526</div>
+            <!-- <span class="hotline-label">Ambulance Dispatch</span> -->
+            <a href="tel:+8801819175526" class="btn-call" data-number="+880 1819-175526">
+              <i class="fas fa-phone"></i> Call Now
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <p class="support-text">
+        Our <strong>trained medical staff</strong> is available <strong>around the clock</strong>. 
+        Call immediately for urgent medical attention.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- Copy Toast (Desktop) -->
+<div class="copy-toast" id="copyToast">
+  <i class="fas fa-check"></i> Number copied!
+</div>
+
+
+<!-- Hotline Area End -->
+    
+    <!-- Footer Area Starts -->
+
+    <!-- Minimal Hospital Footer -->
+    <footer class="hospital-footer">
+
+        <div class="container footer-container">
+            <div class="row gy-5">
+                <!-- Branding & About -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="footer-logo">
+                        <div class="logo-circle">
+                            <img src="/assets/images/logo/logo-2.jpg" alt="Bismillah Generel Hospital & Digital Diagnostic Center">
+                        </div>
+                        
+                    </div>
+                    <p class="mb-4" style="color: #9ca3af; line-height: 1.8; font-size: 0.95rem;">
+                        Leading healthcare provider in Bangladesh, delivering world-class medical care with compassion and innovation since 2000.
+                    </p>
+                    
+                    <div class="certifications">
+                        <div class="cert-badge">
+                            <i class="fas fa-medal"></i> JCI Accredited
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-certificate"></i> ISO 9001
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a class="fta" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="fta" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="fta" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="fta" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-6 col-md-6">
+                    <h5 class="footer-title">Contact Us</h5>
+                    
+                    <div class="contacts-card">
+                        <div class="contacts-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contacts-content">
+                            <strong>Address</strong>
+                            <small>Main Road, Bismillah General Hospital,
+Hajigonj, Chandpur</small>
+                        </div>
+                    </div>
+
+                    <div class="contacts-card">
+                        <div class="contacts-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contacts-content">
+                            <strong>Phone</strong>
+                            <a href="tel:+8801748237575">+880 1748-237575</a>,
+                            <a href="tel:+8801819175526">+880 1819-175526</a>
+                        </div>
+                    </div>
+
+                    <div class="contacts-card">
+                        <div class="contacts-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contacts-content">
+                            <strong>Email</strong>
+                            <a href="mailto:bddcgh@gmail.com">bddcgh@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="mb-0"><span>
+ &copy;<script>document.write(new Date().getFullYear());</script> Bismillah Generel Hospital & Digital Diagnostic Center All rights reserved | Developed By <i class="fa fa-heart-o" aria-hidden="true"></i> <a href="https://bdgs.netlify.app" target="_blank">BDGS</a>
+</span>
+                </p>
+                
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer Area End -->
+
+
+    <!-- Javascript -->
+    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="assets/js/vendor/bootstrap-4.1.3.min.js"></script>
+    <script src="assets/js/vendor/wow.min.js"></script>
+    <script src="assets/js/vendor/owl-carousel.min.js"></script>
+    <script src="assets/js/vendor/jquery.datetimepicker.full.min.js"></script>
+    <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
+    <script src="assets/js/vendor/superfish.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+</html>

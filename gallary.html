@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Page Title -->
+    <title>Bismillah Dialysis Center</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/assets/images/logo/favicon.bmp" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/assets/css/animate-3.7.0.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome-4.7.0.min.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap-4.1.3.min.css">
+    <link rel="stylesheet" href="/assets/css/owl-carousel.min.css">
+    <link rel="stylesheet" href="/assets/css/jquery.datetimepicker.min.css">
+        
+    <link rel="stylesheet" href="/assets/css/linearicons.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+  
+<body>
+    <!-- Preloader Starts -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Header Area Starts -->
+  <style>
+    :root {
+      --primary: #2ba8ce;
+      --primary-light: #3bb2f6;
+      --accent: #f59e0b;
+      --text: #1f2937;
+      --bg: #f8fafc;
+      --card-bg: rgba(255, 255, 255, 0.15);
+      --border: rgba(255, 255, 255, 0.2);
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+
+    /* Header */
+    .hospital-header {
+      background: whitesmoke;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid var(--border);
+      padding: 0.5rem 0;
+    }
+
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .logo img {
+      height: 50px;
+      margin-right: 12px;
+      border-radius: 8px;
+    }
+
+
+    /* Navigation */
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-item > a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.75rem 0;
+      display: block;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-item > a::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+      transition: width 0.4s ease;
+    }
+
+    .nav-item:hover > a,
+    .nav-item.active > a {
+      color: white;
+    }
+
+    .nav-item:hover > a::before,
+    .nav-item.active > a::before {
+      width: 100%;
+    }
+
+    /* Dropdown */
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      min-width: 280px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      padding: 1rem 0;
+      margin-top: 1rem;
+    }
+
+    .nav-item:hover .dropdown {
+      opacity: 1;
+      visibility: visible;
+      /* transform: translateX(-50%) translateY(8px); */
+    }
+
+    .dropdown a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0.75rem 1.5rem;
+      color: #000;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+
+    }
+
+    .dropdown a i {
+      width: 20px;
+      font-size: 1.1rem;
+      color: var(--accent);
+    }
+
+    .dropdown a:hover {
+      background: rgba(255, 255, 255, 0);
+      padding-left: 2rem;     
+       background-color: #697ea7b9;
+       color: white;
+    }
+
+    /* CTA Button */
+    .cta-btn {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+    }
+
+    .cta-btn:hover {
+      background: #f97316;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+    }
+
+    /* Mobile Toggle */
+    .mobile-toggle {
+      display: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Mobile Menu */
+
+    
+    @media (max-width: 992px) {
+      .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+            background-color:#8c93b3;
+    color: #fff;
+        backdrop-filter: blur(12px);
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        transition: left 0.4s ease;
+        overflow-y: auto;
+      }
+
+      .nav-menu.active {
+        left: 0;
+      }
+
+      .nav-item > a {
+        padding: 1rem 0;
+        font-size: 1.1rem;
+      }
+
+      .dropdown {
+        position: static;
+        transform: none;
+        background: rgba(0, 0, 0, 0.1);
+        border: none;
+        box-shadow: none;
+        border-radius: 12px;
+        margin: 0.5rem 0;
+        display: none;
+      }
+
+      .dropdown.active {
+        display: block;
+      }
+
+      .dropdown a {
+        padding-left: 2.5rem;
+      }
+
+      .nav-item.open .dropdown {
+        display: block;
+      }
+
+      .nav-item > a::after {
+        content: '\f078';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        float: right;
+        font-size: 0.9rem;
+        transition: transform 0.3s;
+      }
+
+      .nav-item.open > a::after {
+        transform: rotate(180deg);
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+
+      .cta-btn {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo a {
+        font-size: 1.4rem;
+      }
+      .logo img {
+        height: 40px;
+      }
+    }
+  </style>
+
+  <!-- Modern Hospital Header -->
+  <header class="hospital-header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/logo/logo.png" alt="Bismillah Generel Hospital & Digital Diagnostic Center">
+        </a>
+      </div>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item active"><a href="index.html">Home</a></li>
+          
+          <li class="nav-item">
+            <a href="departments.html">Departments <i class="fa-solid fa-caret-down"></i></a>
+            <div class="dropdown">
+              <a href="/department/bismillah-digital-diagonstic-center.html"><i class="fas fa-microscope"></i>Bismillah Digital Diagnostic Center</a>
+              <a href="/department/bismillah-general-hospital.html"><i class="fas fa-hospital"></i>Bismillah General Hospital</a>
+              <a href="/department/bismillah-physio-therapy-center.html"><i class="fas fa-running"></i>Bismillah Physiotherapy Center</a>
+              <a href="/department/bismillah-rent-a-car.html"><i class="fas fa-car"></i>Bismillah Rent A Car</a>
+              <a href="/department/bismillah-medicine-corner.html"><i class="fas fa-pills"></i>Bismillah Medicine Corner</a>
+              <a href="/department/bismillah-dialysis-center.html"><i class="fas fa-heartbeat"></i>Bismillah Dialysis Center</a>
+              <a href="/department/bismillah-ct-scan-center.html"><i class="fas fa-x-ray"></i>Bismillah CT Scan Center</a>
+              <a href="/department/bismillah-ambulance-service.html"><i class="fas fa-ambulance"></i>Bismillah Ambulance Service</a>
+            </div>
+          </li>
+          
+          <li class="nav-item"><a href="doctors.html">Doctors</a></li>
+          <li class="nav-item"><a href="about.html">About Us</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="mobile-toggle" id="mobile-toggle">
+          <i class="fas fa-bars text-success"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+<script>
+  // Auto Set Active Menu Item - FIXED & ROBUST
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPath = location.pathname; // e.g., "/", "/about.html", "/department/bismillah-general-hospital.html"
+    const links = document.querySelectorAll('.nav-menu a');
+
+    // Normalize current path
+    let currentPage = currentPath.endsWith('/') ? currentPath.slice(0, -1) : currentPath;
+    if (!currentPage) currentPage = '/'; // Root = home
+
+    links.forEach(link => {
+      const href = link.getAttribute('href');
+      let linkPath = href;
+
+      // Normalize href
+      if (href === 'index.html' || href === '/' || href === './') {
+        linkPath = '/';
+      } else if (href.startsWith('/')) {
+        linkPath = href.split('#')[0].split('?')[0]; // Remove hash/query
+      } else {
+        // Relative path - convert to absolute for comparison
+        const base = location.pathname.substring(0, location.pathname.lastIndexOf('/'));
+        linkPath = new URL(href, location.origin + base).pathname;
+      }
+
+      // Special: if current page is in /department/, and link is "departments.html", don't activate
+      if (currentPage.startsWith('/department/') && linkPath === '/departments.html') {
+        return;
+      }
+
+      // Match exact or root
+      if (linkPath === currentPage || (linkPath === '/' && currentPage === '/')) {
+        link.parentElement.classList.add('active');
+      } else {
+        link.parentElement.classList.remove('active');
+      }
+    });
+  });
+
+  // Mobile Menu Toggle
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  mobileToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navMenu.classList.toggle('active');
+  });
+
+  // Dropdown on Mobile
+  document.querySelectorAll('.nav-item > a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      if (window.innerWidth <= 992 && this.nextElementSibling?.classList.contains('dropdown')) {
+        e.preventDefault();
+        const parent = this.parentElement;
+        parent.classList.toggle('open');
+        const dropdown = parent.querySelector('.dropdown');
+        dropdown.classList.toggle('active');
+      }
+    });
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.hospital-header')) {
+      navMenu.classList.remove('active');
+      document.querySelectorAll('.nav-item').forEach(item => {
+        item.classList.remove('open');
+        item.querySelector('.dropdown')?.classList.remove('active');
+      });
+    }
+  });
+</script>
+    <!-- Header Area End -->
+
+    <!-- Banner Area Starts -->
+    <section class="banner-area other-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Bismillah Dialysis Center</h1>
+                    <a href="/index.html">Home</a> <span>|</span> <a href="/department/bismillah-dialysis-center.html">Bismillah Dialysis Center</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Area End -->
+
+
+
+<!-- Your content here -->
+
+
+
+    <!-- LineIcons -->
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+   
+    <!-- AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0d6efd;
+            --success: #198754;
+            --light: #f8f9fa;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+
+
+        #gallery {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--success));
+            border-radius: 2px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            padding: 0 1rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 260px;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 8px 25px var(--shadow);
+            transition: all 0.4s ease;
+            cursor: default;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.15);
+        }
+
+        .gallery-item .icon-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3.5rem;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+        }
+
+        .gallery-item:hover .icon-overlay {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+                gap: 1rem;
+            }
+            .gallery-item .icon-overlay {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section-title {
+                font-size: 2.2rem;
+            }
+            .gallery-item .icon-overlay {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Icon + Image Gallery (No Text) -->
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Our Gallery</h2>
+            <div class="gallery-grid">
+                
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="/assets/images/gallary/g1.jpg" alt="">
+                    <i class="lni lni-sthethoscope icon-overlay"></i>
+                </div>
+
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="150">
+                    <img src="/assets/images/gallary/g2.jpg" alt="">
+                    <i class="lni lni-sthethoscope icon-overlay"></i>
+                </div>
+
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="/assets/images/gallary/g3.jpg" alt="">
+                    <i class="lni lni-sthethoscope icon-overlay"></i>
+                </div>
+
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="250">
+                    <img src="/assets/images/gallary/g4.jpg" alt="">
+                    <i class="lni lni-sthethoscope icon-overlay"></i>
+                </div>
+
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+                    <img src="/assets/images/gallary/g5.jpg" alt="">
+                    <i class="lni lni-sthethoscope icon-overlay"></i>
+                </div>
+
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="350">
+                    <img src="/assets/images/gallary/g6.jpg" alt="">
+                    <i class="lni lni-sthethoscope icon-overlay"></i>
+                </div>
+
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+                    <img src="/assets/images/gallary/g7.jpg" alt="">
+                    <i class="lni lni-sthethoscope icon-overlay"></i>
+                </div>
+
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="450">
+                    <img src="/assets/images/gallary/g8.jpg" alt="">
+                    <i class="lni lni-sthethoscope icon-overlay"></i>
+                </div>
+
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="500">
+                    <img src="/assets/images/gallary/g9.jpg" alt="">
+                    <i class="lni lni-sthethoscope icon-overlay"></i>
+                </div>
+
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="550">
+                    <img src="/assets/images/gallary/g10.jpg" alt="">
+                    <i class="lni lni-sthethoscope icon-overlay"></i>
+                </div>
+
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
+                    <img src="/assets/images/gallary/g11.jpg" alt="">
+                    <i class="lni lni-sthethoscope icon-overlay"></i>
+                </div>
+
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="650">
+                    <img src="/assets/images/gallary/g12.jpg" alt="">
+                    <i class="lni lni-sthethoscope icon-overlay"></i>
+                </div>
+
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="700">
+                    <img src="/assets/images/gallary/g13.jpg" alt="">
+                    <i class="lni lni-sthethoscope icon-overlay"></i>
+                </div>
+
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="750">
+                    <img src="/assets/images/gallary/g14.jpg" alt="">
+                    <i class="lni lni-sthethoscope icon-overlay"></i>
+                </div>
+
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="800">
+                    <img src="/assets/images/gallary/g15.jpg" alt="">
+                    <i class="lni lni-sthethoscope icon-overlay"></i>
+                </div>
+
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="850">
+                    <img src="/assets/images/gallary/g16.jpg" alt="">
+                    <i class="lni lni-sthethoscope icon-overlay"></i>
+                </div>
+
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="900">
+                    <img src="/assets/images/gallary/g17.jpg" alt="">
+                    <i class="lni lni-sthethoscope icon-overlay"></i>
+                </div>
+
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="950">
+                    <img src="/assets/images/gallary/g18.jpg" alt="">
+                    <i class="lni lni-sthethoscope icon-overlay"></i>
+                </div>
+
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="1000">
+                    <img src="/assets/images/gallary/g19.jpg" alt="">
+                    <i class="lni lni-sthethoscope icon-overlay"></i>
+                </div>
+
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="1050">
+                    <img src="/assets/images/gallary/g20.jpg" alt="">
+                    <i class="lni lni-sthethoscope icon-overlay"></i>
+                </div>
+
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="1100">
+                    <img src="/assets/images/gallary/g21.jpg" alt="">
+                    <i class="lni lni-sthethoscope icon-overlay"></i>
+                </div>
+
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="1150">
+                    <img src="/assets/images/gallary/g22.jpg" alt="">
+                    <i class="lni lni-sthethoscope icon-overlay"></i>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-quart',
+            once: true
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+
+
+
+
+    <!-- Footer Area Starts -->
+
+    <!-- Minimal Hospital Footer -->
+    <footer class="hospital-footer">
+
+        <div class="container footer-container">
+            <div class="row gy-5">
+                <!-- Branding & About -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="footer-logo">
+                        <div class="logo-circle">
+                            <img src="/assets/images/logo/logo-2.jpg" alt="Bismillah Generel Hospital & Digital Diagnostic Center">
+                        </div>
+                        
+                    </div>
+                    <p class="mb-4" style="color: #9ca3af; line-height: 1.8; font-size: 0.95rem;">
+                        Leading healthcare provider in Bangladesh, delivering world-class medical care with compassion and innovation since 2000.
+                    </p>
+                    
+                    <div class="certifications">
+                        <div class="cert-badge">
+                            <i class="fas fa-medal"></i> JCI Accredited
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-certificate"></i> ISO 9001
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a class="fta" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="fta" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="fta" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="fta" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-6 col-md-6">
+                    <h5 class="footer-title">Contact Us</h5>
+                    
+                    <div class="contacts-card">
+                        <div class="contacts-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contacts-content">
+                            <strong>Address</strong>
+                            <small>Main Road, Bismillah General Hospital,
+Hajigonj, Chandpur</small>
+                        </div>
+                    </div>
+
+                    <div class="contacts-card">
+                        <div class="contacts-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contacts-content">
+                            <strong>Phone</strong>
+                            <a href="tel:+8801748237575">+880 1748-237575</a>,
+                            <a href="tel:+8801819175526">+880 1819-175526</a>
+                        </div>
+                    </div>
+
+                    <div class="contacts-card">
+                        <div class="contacts-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contacts-content">
+                            <strong>Email</strong>
+                            <a href="mailto:bddcgh@gmail.com">bddcgh@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="mb-0"><span>
+ &copy;<script>document.write(new Date().getFullYear());</script> Bismillah Generel Hospital & Digital Diagnostic Center All rights reserved | Developed By <i class="fa fa-heart-o" aria-hidden="true"></i> <a href="https://bdgs.netlify.app" target="_blank">BDGS</a>
+</span>
+                </p>
+                
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer Area End -->
+
+
+    <!-- Javascript -->
+    <script src="/assets/js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="/assets/js/vendor/bootstrap-4.1.3.min.js"></script>
+    <script src="/assets/js/vendor/wow.min.js"></script>
+    <script src="/assets/js/vendor/owl-carousel.min.js"></script>
+    <script src="/assets/js/vendor/jquery.datetimepicker.full.min.js"></script>
+    <script src="/assets/js/vendor/jquery.nice-select.min.js"></script>
+    <script src="/assets/js/vendor/superfish.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+</body>
+</html>

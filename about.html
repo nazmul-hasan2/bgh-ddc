@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Page Title -->
+    <title>About</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/favicon.bmp" type="image/x-icon">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/animate-3.7.0.css">
+    <link rel="stylesheet" href="assets/css/font-awesome-4.7.0.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-4.1.3.min.css">
+    <link rel="stylesheet" href="assets/css/owl-carousel.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="assets/css/linearicons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+<body>
+    <!-- Preloader Starts -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Header Area Starts -->
+  <style>
+    :root {
+      --primary: #2ba8ce;
+      --primary-light: #3bb2f6;
+      --accent: #f59e0b;
+      --text: #1f2937;
+      --bg: #f8fafc;
+      --card-bg: rgba(255, 255, 255, 0.15);
+      --border: rgba(255, 255, 255, 0.2);
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+
+    /* Header */
+    .hospital-header {
+      background: whitesmoke;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid var(--border);
+      padding: 0.5rem 0;
+    }
+
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .logo img {
+      height: 50px;
+      margin-right: 12px;
+      border-radius: 8px;
+    }
+
+
+    /* Navigation */
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-item > a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.75rem 0;
+      display: block;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-item > a::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+      transition: width 0.4s ease;
+    }
+
+    .nav-item:hover > a,
+    .nav-item.active > a {
+      color: white;
+    }
+
+    .nav-item:hover > a::before,
+    .nav-item.active > a::before {
+      width: 100%;
+    }
+
+    /* Dropdown */
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      min-width: 280px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      padding: 1rem 0;
+      margin-top: 1rem;
+    }
+
+    .nav-item:hover .dropdown {
+      opacity: 1;
+      visibility: visible;
+      /* transform: translateX(-50%) translateY(8px); */
+    }
+
+    .dropdown a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0.75rem 1.5rem;
+      color: #000;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+
+    }
+
+    .dropdown a i {
+      width: 20px;
+      font-size: 1.1rem;
+      color: var(--accent);
+    }
+
+    .dropdown a:hover {
+      background: rgba(255, 255, 255, 0);
+      padding-left: 2rem;     
+       background-color: #697ea7b9;
+       color: white;
+    }
+
+    /* CTA Button */
+    .cta-btn {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+    }
+
+    .cta-btn:hover {
+      background: #f97316;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+    }
+
+    /* Mobile Toggle */
+    .mobile-toggle {
+      display: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Mobile Menu */
+
+    
+    @media (max-width: 992px) {
+      .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+            background-color:#8c93b3;
+    color: #fff;
+        backdrop-filter: blur(12px);
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        transition: left 0.4s ease;
+        overflow-y: auto;
+      }
+
+      .nav-menu.active {
+        left: 0;
+      }
+
+      .nav-item > a {
+        padding: 1rem 0;
+        font-size: 1.1rem;
+      }
+
+      .dropdown {
+        position: static;
+        transform: none;
+        background: rgba(0, 0, 0, 0.1);
+        border: none;
+        box-shadow: none;
+        border-radius: 12px;
+        margin: 0.5rem 0;
+        display: none;
+      }
+
+      .dropdown.active {
+        display: block;
+      }
+
+      .dropdown a {
+        padding-left: 2.5rem;
+      }
+
+      .nav-item.open .dropdown {
+        display: block;
+      }
+
+      .nav-item > a::after {
+        content: '\f078';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        float: right;
+        font-size: 0.9rem;
+        transition: transform 0.3s;
+      }
+
+      .nav-item.open > a::after {
+        transform: rotate(180deg);
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+
+      .cta-btn {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo a {
+        font-size: 1.4rem;
+      }
+      .logo img {
+        height: 40px;
+      }
+    }
+  </style>
+
+  <!-- Modern Hospital Header -->
+  <header class="hospital-header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/logo/logo.png" alt="Bismillah Generel Hospital & Digital Diagnostic Center">
+        </a>
+      </div>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item active"><a href="index.html">Home</a></li>
+          
+          <li class="nav-item">
+            <a href="departments.html">Departments <i class="fa-solid fa-caret-down"></i></a>
+            <div class="dropdown">
+              <a href="/department/bismillah-digital-diagonstic-center.html"><i class="fas fa-microscope"></i>Bismillah Digital Diagnostic Center</a>
+              <a href="/department/bismillah-general-hospital.html"><i class="fas fa-hospital"></i>Bismillah General Hospital</a>
+              <a href="/department/bismillah-physio-therapy-center.html"><i class="fas fa-running"></i>Bismillah Physiotherapy Center</a>
+              <a href="/department/bismillah-rent-a-car.html"><i class="fas fa-car"></i>Bismillah Rent A Car</a>
+              <a href="/department/bismillah-medicine-corner.html"><i class="fas fa-pills"></i>Bismillah Medicine Corner</a>
+              <a href="/department/bismillah-dialysis-center.html"><i class="fas fa-heartbeat"></i>Bismillah Dialysis Center</a>
+              <a href="/department/bismillah-ct-scan-center.html"><i class="fas fa-x-ray"></i>Bismillah CT Scan Center</a>
+              <a href="/department/bismillah-ambulance-service.html"><i class="fas fa-ambulance"></i>Bismillah Ambulance Service</a>
+            </div>
+          </li>
+          
+          <li class="nav-item"><a href="doctors.html">Doctors</a></li>
+          <li class="nav-item"><a href="about.html">About Us</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="mobile-toggle" id="mobile-toggle">
+          <i class="fas fa-bars text-success"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+<script>
+  // Auto Set Active Menu Item - FIXED & ROBUST
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPath = location.pathname; // e.g., "/", "/about.html", "/department/bismillah-general-hospital.html"
+    const links = document.querySelectorAll('.nav-menu a');
+
+    // Normalize current path
+    let currentPage = currentPath.endsWith('/') ? currentPath.slice(0, -1) : currentPath;
+    if (!currentPage) currentPage = '/'; // Root = home
+
+    links.forEach(link => {
+      const href = link.getAttribute('href');
+      let linkPath = href;
+
+      // Normalize href
+      if (href === 'index.html' || href === '/' || href === './') {
+        linkPath = '/';
+      } else if (href.startsWith('/')) {
+        linkPath = href.split('#')[0].split('?')[0]; // Remove hash/query
+      } else {
+        // Relative path - convert to absolute for comparison
+        const base = location.pathname.substring(0, location.pathname.lastIndexOf('/'));
+        linkPath = new URL(href, location.origin + base).pathname;
+      }
+
+      // Special: if current page is in /department/, and link is "departments.html", don't activate
+      if (currentPage.startsWith('/department/') && linkPath === '/departments.html') {
+        return;
+      }
+
+      // Match exact or root
+      if (linkPath === currentPage || (linkPath === '/' && currentPage === '/')) {
+        link.parentElement.classList.add('active');
+      } else {
+        link.parentElement.classList.remove('active');
+      }
+    });
+  });
+
+  // Mobile Menu Toggle
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  mobileToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navMenu.classList.toggle('active');
+  });
+
+  // Dropdown on Mobile
+  document.querySelectorAll('.nav-item > a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      if (window.innerWidth <= 992 && this.nextElementSibling?.classList.contains('dropdown')) {
+        e.preventDefault();
+        const parent = this.parentElement;
+        parent.classList.toggle('open');
+        const dropdown = parent.querySelector('.dropdown');
+        dropdown.classList.toggle('active');
+      }
+    });
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.hospital-header')) {
+      navMenu.classList.remove('active');
+      document.querySelectorAll('.nav-item').forEach(item => {
+        item.classList.remove('open');
+        item.querySelector('.dropdown')?.classList.remove('active');
+      });
+    }
+  });
+</script>
+    <!-- Header Area End -->
+
+    <!-- Banner Area Starts -->
+    <section class="banner-area other-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>About Us</h1>
+                    <a href="index.html">Home</a> <span>|</span> <a href="about.html">About Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Area End -->
+
+ <!-- About Us Section -->
+<section class="about-us-section py-5">
+    <div class="container">
+        <!-- Header -->
+        <div class="row mb-5 text-center">
+            <div class="col-lg-8 offset-lg-2">
+                <h2 class="fw-bold">Bismillah Group</h2>
+                <p class="lead">Our Divisions and Vision for Quality Healthcare</p>
+            </div>
+        </div>
+
+ <!-- Divisions with Icons -->
+<div class="row g-4 mb-5">
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center p-3">
+            <div class="mb-3">
+                <i class="bi bi-activity display-4 text-primary"></i>
+            </div>
+            <h5 class="card-title fw-bold">Bismillah Digital Diagnostic Center</h5>
+            <p class="card-text">High-quality diagnostic services with modern technology and experienced staff.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center p-3">
+            <div class="mb-3">
+                <i class="bi bi-hospital display-4 text-primary"></i>
+            </div>
+            <h5 class="card-title fw-bold">Bismillah General Hospital</h5>
+            <p class="card-text">Smart, high-tech hospital providing comprehensive healthcare solutions.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center p-3">
+            <div class="mb-3">
+                <i class="bi bi-person-hearts display-4 text-primary"></i>
+            </div>
+            <h5 class="card-title fw-bold">Bismillah Physiotherapy Center</h5>
+            <p class="card-text">Professional physiotherapy with compassionate care to restore patient health.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 mb-5">
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center p-3">
+            <div class="mb-3">
+                <i class="bi bi-car-front display-4 text-primary"></i>
+            </div>
+            <h5 class="card-title fw-bold">Bismillah Rent A Car</h5>
+            <p class="card-text">Reliable transport services for our patients and visitors.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center p-3">
+            <div class="mb-3">
+                <i class="bi bi-capsule display-4 text-primary"></i>
+            </div>
+            <h5 class="card-title fw-bold">Bismillah Medicine Corner</h5>
+            <p class="card-text">Pharmacy services ensuring easy access to essential medicines.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center p-3">
+            <div class="mb-3">
+                <i class="bi bi-droplet display-4 text-primary"></i>
+            </div>
+            <h5 class="card-title fw-bold">Bismillah Dialysis Center</h5>
+            <p class="card-text">Specialized dialysis treatment with experienced nephrology support.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 mb-5">
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center p-3">
+                    <div class="mb-3">
+            <!-- Custom CT Machine SVG -->
+            <svg width="67px" height="67px" viewBox="0 0 72 72" id="emoji" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="color"> <path fill="#92d3f5" d="M11.7973,32.1459H24.7654a1.6942,1.6942,0,0,1,1.2068.502,14.3889,14.3889,0,0,1,2.5537,3.0972l.0151.0527a1.6913,1.6913,0,0,1-1.6555,2.1059l-15.0669-.008a1.7012,1.7012,0,0,1-1.7-1.6852l-.0222-2.3473A1.7012,1.7012,0,0,1,11.7973,32.1459Z"></path> </g> <g id="line"> <path fill="none" stroke="#4c00ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.9855,42.7615A20.43,20.43,0,0,0,56.586,35.2777a20.4308,20.4308,0,0,0-39.6845-7.2572s8.7984.2756,8.8872.1679c3.721-4.5128,6.0234-5.59,10.3188-5.59a12.6819,12.6819,0,0,1,0,25.3593,12.3643,12.3643,0,0,1-10.1984-5.412"></path> <line x1="17.3324" x2="24.5731" y1="42.412" y2="42.4557" fill="none" stroke="#4c00ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></line> <path stroke="#4c00ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.186,40.904l26.07.0783a3.232,3.232,0,0,1-2.0356,1.4092c-1.2526.1566-24.0687.036-24.0687.036Z"></path> <path fill="none" stroke="#4c00ff" stroke-miterlimit="10" stroke-width="2" d="M11.7973,32.1459H24.7654a1.6942,1.6942,0,0,1,1.2068.502,14.3889,14.3889,0,0,1,2.5537,3.0972l.0151.0527a1.6913,1.6913,0,0,1-1.6555,2.1059l-15.0669-.008a1.7012,1.7012,0,0,1-1.7-1.6852l-.0222-2.3473A1.7012,1.7012,0,0,1,11.7973,32.1459Z"></path> <ellipse cx="32.7995" cy="34.8192" rx="3.2175" ry="3.1989"></ellipse> </g> </g></svg>
+        </div>
+            <h5 class="card-title fw-bold">Bismillah CT Scan Center</h5>
+            <p class="card-text">Advanced CT scan services for accurate and timely diagnosis.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center p-3">
+            <div class="mb-3">
+                <i class="fa fa-ambulance display-4 text-primary"></i>
+            </div>
+            <h5 class="card-title fw-bold">Bismillah Ambulance Service</h5>
+            <p class="card-text">24/7 emergency ambulance service with trained paramedics.</p>
+        </div>
+    </div>
+</div>
+
+
+        <!-- Mission Section -->
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <img src="/assets/images/mission.jpg" alt="Mission" class="img-fluid rounded shadow-sm">
+            </div>
+            <div class="col-lg-6">
+                <h3 class="fw-bold"><i class="bi bi-bullseye me-2"></i>Our Mission</h3>
+                <p class="mt-3">
+    “Our Mission is to bring <span class="highlight">healthcare of international standards</span> within the reach of every individual. 
+    We are committed to the achievement and maintenance of excellence in education, research, and healthcare for the benefit of humanity.”
+</p>
+
+            </div>
+        </div>
+
+        <!-- Managing Director -->
+        <div class="row text-center mb-5">
+            <div class="col-lg-12">
+                <h3 class="fw-bold"><i class="bi bi-person-badge me-2"></i>Managing Director</h3>
+                <p class="lead">Managing Director: <span class="highlight">Sheikh Tofayel Ahmed</span></p>
+
+            </div>
+        </div>
+
+        <!-- Vision Section -->
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6 order-lg-2">
+                <img src="assets/images/vision.jpg" alt="Vision" class="img-fluid rounded shadow-sm">
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <h3 class="fw-bold"><i class="bi bi-eye me-2"></i>Vision</h3>
+                <p class="mt-3">To be recognized as a healthcare industry leader, valued by patients and healthcare providers, respected by the healthcare community, sought after as an employer, and admired by competitors.</p>
+                <p>We started our operations as an X-Ray clinic in 1986. Our clinical excellence today is unmatched.</p>
+            </div>
+        </div>
+
+        <!-- Hospital Story -->
+        <div class="row mb-5">
+            <div class="col-lg-12">
+                <h3 class="fw-bold text-center mb-4"><i class="bi bi-building-check me-2"></i>Bismillah General Hospital</h3>
+                <p>Bismillah General Hospital in Hajigonj is a smarter high-tech hospital than many in the district. Technology helps mitigate losses and alleviate patient suffering, guiding skilled medical staff to manage patients, diseases, outcomes, and consequences.</p>
+            </div>
+        </div>
+
+        <!-- Centers Highlight -->
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm border-0 p-3">
+                    <div class="mb-3 text-center">
+                        <i class="bi bi-patch-check display-4 text-primary"></i>
+                    </div>
+                    <h5 class="card-title fw-bold">Bismillah Digital Diagnostic Center</h5>
+                    <p class="card-text">Strength built through struggle and hardship to maintain consistent quality in every aspect of patient service. Compassion, empathy, and optimism guide our work daily.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm border-0 p-3">
+                    <div class="mb-3 text-center">
+                        <i class="bi bi-hand-thumbs-up display-4 text-primary"></i>
+                    </div>
+                    <h5 class="card-title fw-bold">Bismillah Physiotherapy Center</h5>
+                    <p class="card-text">Staffed with individuals who naturally help and connect with patients. We provide confidence, understanding, and support, aiming to profoundly change patients' lives.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <!-- Footer Area Starts -->
+
+    <!-- Minimal Hospital Footer -->
+    <footer class="hospital-footer">
+
+        <div class="container footer-container">
+            <div class="row gy-5">
+                <!-- Branding & About -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="footer-logo">
+                        <div class="logo-circle">
+                            <img src="/assets/images/logo/logo-2.jpg" alt="Bismillah Generel Hospital & Digital Diagnostic Center">
+                        </div>
+                        
+                    </div>
+                    <p class="mb-4" style="color: #9ca3af; line-height: 1.8; font-size: 0.95rem;">
+                        Leading healthcare provider in Bangladesh, delivering world-class medical care with compassion and innovation since 2000.
+                    </p>
+                    
+                    <div class="certifications">
+                        <div class="cert-badge">
+                            <i class="fas fa-medal"></i> JCI Accredited
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-certificate"></i> ISO 9001
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a class="fta" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="fta" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="fta" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="fta" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-6 col-md-6">
+                    <h5 class="footer-title">Contact Us</h5>
+                    
+                    <div class="contacts-card">
+                        <div class="contacts-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contacts-content">
+                            <strong>Address</strong>
+                            <small>Main Road, Bismillah General Hospital,
+Hajigonj, Chandpur</small>
+                        </div>
+                    </div>
+
+                    <div class="contacts-card">
+                        <div class="contacts-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contacts-content">
+                            <strong>Phone</strong>
+                            <a href="tel:+8801748237575">+880 1748-237575</a>,
+                            <a href="tel:+8801819175526">+880 1819-175526</a>
+                        </div>
+                    </div>
+
+                    <div class="contacts-card">
+                        <div class="contacts-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contacts-content">
+                            <strong>Email</strong>
+                            <a href="mailto:bddcgh@gmail.com">bddcgh@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="mb-0"><span>
+ &copy;<script>document.write(new Date().getFullYear());</script> Bismillah Generel Hospital & Digital Diagnostic Center All rights reserved | Developed By <i class="fa fa-heart-o" aria-hidden="true"></i> <a href="https://bdgs.netlify.app" target="_blank">BDGS</a>
+</span>
+                </p>
+                
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer Area End -->
+
+
+    <!-- Javascript -->
+    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="assets/js/vendor/bootstrap-4.1.3.min.js"></script>
+    <script src="assets/js/vendor/wow.min.js"></script>
+    <script src="assets/js/vendor/owl-carousel.min.js"></script>
+    <script src="assets/js/vendor/jquery.datetimepicker.full.min.js"></script>
+    <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
+    <script src="assets/js/vendor/superfish.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+</html>
